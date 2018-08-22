@@ -1,0 +1,59 @@
+/* 首先去掉一些默认的样式 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+.code , .canvas{
+    width: 50%;
+    height: 90vh;
+    margin: 50px;
+}
+
+.code{
+    border: 1px solid #07bbea;
+    overflow-y:hidden;
+}
+.music,.time{
+    display: flex;
+    flex-wrap: wrap;
+    width:120px;
+}
+.music{
+    position: fixed;
+    right: 190px;
+    top: 90px;
+}
+.time{
+    position: fixed;
+    right: 55px;
+    top: 90px;
+}
+.button,.speed{
+    background:#07bbea;
+    border: none;
+    height: 40px;
+    line-height: 40px;
+    width: 120px;
+    border: 1px solid #07bbea;
+    border-radius:15px;
+    font-size:18px;
+    color:white;
+    box-shadow: -2px 3px 10px 0px rgba(0,0,0,0.4);
+    margin:10px;
+}
+
+.speed{
+    text-align: center;
+}
+
+
+.token.selector,.token.punctuation,.token.property,.token.comment,.token.function{
+    color: rgb(132,26,138);
+}
+
