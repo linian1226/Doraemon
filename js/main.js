@@ -407,7 +407,7 @@ var result = `
 
 `;
 
-let timeout = 370;
+let timeout = 170;
 let n = 0;
 
 function $(selector) {
@@ -416,7 +416,7 @@ function $(selector) {
 
 function writeCode(result , timeout) {
     return setInterval(()=>{
-        n += 1;
+        n += 2;
        $('.code').innerHTML = Prism.highlight(result.substring(0 , n), Prism.languages.css, 'css');
        $('#styleTag').innerHTML = result.substring(0 , n);
        $('.code').scrollTop = $('.code').scrollHeight;
@@ -427,7 +427,7 @@ function writeCode(result , timeout) {
 }
 
 function resetSpeed(timeout){
-    $('.speed').innerHTML = `速度：${10 - Math.floor(timeout / 40)}`;
+    $('.speed').innerHTML = `速度：${5 - Math.floor(timeout / 40)}`;
     window.clearInterval(timerId);
     timerId = writeCode(result , timeout);
 }
@@ -438,7 +438,7 @@ $('.up').addEventListener('click', ()=>{
 })
 
 $('.down').addEventListener('click' , ()=>{
-    if(timeout < 370) timeout += 40;
+    if(timeout < 170) timeout += 40;
     resetSpeed(timeout);
 })
 var timerId = writeCode(result , timeout);
